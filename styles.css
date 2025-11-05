@@ -230,6 +230,31 @@ body {
     transform: translateY(-2px);
 }
 
+/* Outline Button (لزر تسوّق الآن) */
+.btn-outline {
+    background: transparent;
+    color: var(--botbox-orange-red);
+    border: 2px solid var(--botbox-orange-red);
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--botbox-orange-red);
+    color: var(--botbox-white);
+    transform: translateY(-2px);
+}
+
+/* تحسين الوصولية عند التركيز بلوحة المفاتيح */
+.btn:focus,
+.btn-outline:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(233, 77, 54, 0.35);
+}
+
 .hero-image {
     display: flex;
     justify-content: center;
@@ -1076,3 +1101,4 @@ html {
 .kit-card:active {
     transform: translateY(-3px) scale(1.02);
 }
+
