@@ -232,15 +232,35 @@ body {
 
 /* Outline Button (لزر تسوّق الآن) */
 .btn-outline {
+    position: relative;
+    overflow: hidden;
     background: transparent;
-    color: var(--botbox-orange-red);
-    border: 2px solid var(--botbox-orange-red);
+    color: var(--botbox-gold);
+    border: 2px solid var(--botbox-gold);
     padding: 12px 30px;
     border-radius: 8px;
     font-weight: 600;
     display: inline-block;
-    transition: all 0.3s ease;
 }
+
+/* اللمعة المتكررة */
+.btn-outline::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { right: -100%; }
+    40% { right: 120%; }
+    100% { right: 120%; }
+}
+
 
 .btn-outline:hover {
     background: var(--botbox-orange-red);
@@ -1101,4 +1121,5 @@ html {
 .kit-card:active {
     transform: translateY(-3px) scale(1.02);
 }
+
 
